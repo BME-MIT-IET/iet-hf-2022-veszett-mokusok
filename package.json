@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
+    "test": "mocha test --recursive",
     "test-with-coverage": "nyc mocha test --recursive"
   },
   "author": "",
