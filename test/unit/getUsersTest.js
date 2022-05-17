@@ -24,7 +24,7 @@ describe("getUsers test", () => {
         expect(next).to.be.called.once;
     });
 
-    it("should call next() and return the users data if there was no error", () => {
+    it("should call next() and return the users in res.locals if there was no error", () => {
         const find = (obj, cb) => {
             cb(undefined, "Users");
         };
