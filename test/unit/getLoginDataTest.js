@@ -25,9 +25,9 @@ describe("getLoginData test", () => {
                 user_id: 1
             }
         };
-        const findOne = chai.spy((obj, cb) => { 
+        const findOne = (obj, cb) => { 
             cb("error", undefined);
-         });
+         };
         const objectrepository = {
             UserModel: {
                 findOne
@@ -40,15 +40,15 @@ describe("getLoginData test", () => {
         expect(next).to.have.been.called.with("error");
     });
 
-    it("should call next() and initialize res.locals.user with the user if the user was logged in and there was no error",
+    it("should call next() and return the user in res.locals if the user was logged in and there was no error",
         () => { const req = {
             session: {
                 user_id: 1
             }
         };
-        const findOne = chai.spy((obj, cb) => { 
+        const findOne = (obj, cb) => { 
             cb(undefined, "User");
-         });
+         };
         const objectrepository = {
             UserModel: {
                 findOne
