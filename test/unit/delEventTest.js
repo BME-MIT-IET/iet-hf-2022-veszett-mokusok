@@ -10,7 +10,7 @@ describe("delEventMW test", () => {
     it("should call next() if the event cannot be deleted", () => {
         const next = chai.spy();
         const res = {
-            locals:{}
+            locals: {}
         };
         const mw = eventMW({EventModel: true});
         mw(null, res, next);
@@ -23,6 +23,7 @@ describe("delEventMW test", () => {
                 theEvent:{
                     remove: function (cb) {
                         cb(true)
+                        done();
                     }
                 }
             }
@@ -40,6 +41,7 @@ describe("delEventMW test", () => {
                 theEvent:{
                     remove: function (cb) {
                         cb(false)
+                        done();
                     }
                 }
             },
