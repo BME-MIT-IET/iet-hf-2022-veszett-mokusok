@@ -11,7 +11,7 @@ A code coverage lényege, hogy megtudjuk mennyi sort, ágat, lehetőséget fed l
 össze unit test. Ehhez az Istanbult használtam.
 
 ### Összefoglalás
-Az event middleware-hez megírt teszteket az alábbi command-dal futtattam, amely az összes middleware-ben található unit testet is futtatja egyszerre. 
+Az event middleware-hez megírt teszteket az alábbi command-dal futtattam, amely az összes middleware-hez található unit testet is futtatja egyszerre. 
 
 > npm run test-with-coverage
 
