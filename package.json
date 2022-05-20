@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "artillery-plugin-fuzzer": "^1.0.1",
     "body-parser": "^1.20.0",
     "chai": "^4.3.6",
     "chai-spies": "^1.0.0",
